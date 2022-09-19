@@ -17,13 +17,12 @@ class MyApp extends StatelessWidget {
         GoRouter(debugLogDiagnostics: true, initialLocation: '/', routes: [
       GoRoute(
           path: '/',
-          builder: (context, state) => const FirstPage(),
-          routes: [
-            GoRoute(
+          builder: (context, state) => const FirstPage(),),
+       GoRoute(
               path: 'second',
               builder: (context, state) => const SecondPage(),
             ),
-          ]),
+          
     ]);
     return MaterialApp.router(
       routeInformationProvider:goRouter.routeInformationProvider,
